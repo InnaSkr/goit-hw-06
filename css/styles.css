@@ -231,6 +231,8 @@ button {
     }
 }
 
+/* Mobile menu */
+
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -286,6 +288,7 @@ button {
 
 .mobile-menu-nav {
     margin-bottom: auto;
+    margin-bottom: 168px;
 }
 
 .mobile-nav-list {
@@ -307,14 +310,16 @@ button {
         line-height: 1.1;
         letter-spacing: 0.02em;
         color: #2e2f42;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-mobile-nav-link current {
-    font-weight: 700;
-        font-size: 36px;
-        line-height: 1.1;
-        letter-spacing: 0.02em;
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
         color: #404bbf;
+}
+
+.mobile-contacts {
+    margin-bottom: 48px;
 }
 
 .mobile-contacts-list {
@@ -353,6 +358,8 @@ mobile-nav-link current {
         height: 100%;
         background-color: #4d5ae5;
         border-radius: 50%;
+        width: 40px;
+            height: 40px;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -363,6 +370,12 @@ mobile-nav-link current {
 
 .team-soc-icon {
     fill: #f4f4fd;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
 }
 
 /* Hero/Solutions section */
